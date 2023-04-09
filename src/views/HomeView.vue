@@ -4,7 +4,7 @@ import ShapesBackground from '@/components/ShapesBackground.vue'
 </script>
 
 <template>
-  <div class="flex h-full items-center justify-center">
+  <div class="flex h-full items-center justify-around">
     <HelloMessage />
     <HelloMessage class="hidden lg:block" />
   </div>

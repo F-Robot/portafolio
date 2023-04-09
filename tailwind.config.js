@@ -13,6 +13,10 @@ module.exports = {
         border: '#1e2d3d',
         background: '#021728',
       },
+      spacing: {
+        4.25: '1.125rem',
+        5.25: '1.375rem',
+      },
       backgroundImage: {
         shapes:
           'url("/shape-gradient-variant.svg"), url("/shape-gradient.svg")',
