@@ -19,9 +19,10 @@ import {
   faGithub,
   faTwitter,
 } from '@fortawesome/free-brands-svg-icons'
+import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons'
 
 /* add icons to the library */
-library.add(faInstagram, faLinkedin, faGithub, faTwitter)
+library.add(faInstagram, faLinkedin, faGithub, faTwitter, faBars, faXmark)
 
 const app = createApp(App)
 

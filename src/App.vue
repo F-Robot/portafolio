@@ -7,8 +7,8 @@ import MainFooter from '@/components/MainFooter.vue'
 
 <template>
   <MainLayout>
-    <MainNav />
+    <!-- <MainNav /> -->
     <RouterView />
-    <MainFooter />
+    <!-- <MainFooter class="hidden lg:flex" /> -->
   </MainLayout>
 </template>

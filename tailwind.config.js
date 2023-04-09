@@ -13,6 +13,18 @@ module.exports = {
         border: '#1e2d3d',
         background: '#021728',
       },
+      backgroundImage: {
+        shapes:
+          'url("/shape-gradient-variant.svg"), url("/shape-gradient.svg")',
+      },
+      backgroundPosition: {
+        'shapes-horizontal': 'center, right',
+        'shapes-vertical': 'center, bottom',
+      },
+      backgroundSize: {
+        'shapes-horizontal': '45%, 45%',
+        'shapes-vertical': '450px, 450px',
+      },
       fontFamily: {
         body: '"Fira Code"',
       },
