@@ -5,7 +5,7 @@ const icon = computed(() => `fa-solid ${props.active ? 'fa-xmark' : 'fa-bars'}`)
 </script>
 
 <template>
-  <button class="p-1">
+  <button class="h-full">
     <font-awesome-icon class="text-2xl" :icon="icon" />
   </button>
 </template>

@@ -1,5 +1,8 @@
 <script setup lang="ts">
-const text = 'find me:'
+import FooterTitle from '@/components/FooterTitle.vue'
+import FooterAnchor from '@/components/FooterAnchor.vue'
+
+const title = 'find me:'
 const links = [
   {
     text: '',
@@ -25,23 +28,14 @@ const links = [
 </script>
 
 <template>
-  <footer
-    class="absolute bottom-0 flex min-h-[49.5px] w-full border border-solid border-border"
-  >
-    <span
-      class="flex cursor-default items-center border-r border-solid border-border px-[22px]"
-    >
-      {{ text }}
-    </span>
-    <a
+  <footer class="flex h-12 w-full border-t border-solid border-border">
+    <FooterTitle :title="title" />
+    <FooterAnchor
       v-for="{ text, icon, href } in links"
       :key="href"
       :href="href"
-      target="_blank"
-      class="flex cursor-default items-center border-r border-solid border-border px-[14px] last:ml-auto last:border-l last:border-r-0 hover:text-primary-hover"
-    >
-      {{ text && `${text}&nbsp;` }}
-      <font-awesome-icon v-if="icon" class="text-2xl" :icon="icon" />
-    </a>
+      :text="text"
+      :icon="icon"
+    />
   </footer>
 </template>
