@@ -18,7 +18,7 @@ import { ref, watchEffect } from 'vue'
 <template>
   <main class="relative flex flex-grow items-center justify-around">
     <HelloMessage />
-    <HelloMessage />
+    <div class="hidden: lg:block" />
     <!-- <div ref="tetris" class="tetris h-[500px] w-[250px]" /> -->
     <ShapesBackground />
   </main>

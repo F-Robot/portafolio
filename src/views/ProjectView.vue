@@ -16,11 +16,11 @@ const projects: ProjectCardProps[] = [
   },
   {
     src: '/shopnet-logo.png',
-    href: 'https://shopnet.com.mx',
-    bgClass: 'bg-shopnet',
+    href: 'https://play.google.com/store/apps/details?id=mx.com.shopnet',
+    bgClass: ' bg-shopnet',
     framework: 'vuejs',
     description:
-      'Shopnet landing page, SPA, CSR, REST API, Analytics, infinite scroll, etc...',
+      'Shopnet application, PWA, CSR, REST API, Analytics, hybrid app, etc...',
   },
   {
     src: '/snd-logo.svg',
@@ -31,11 +31,11 @@ const projects: ProjectCardProps[] = [
   },
   {
     src: '/shopnet-logo.png',
-    href: 'https://play.google.com/store/apps/details?id=mx.com.shopnet',
-    bgClass: ' bg-shopnet',
+    href: 'https://shopnet.com.mx',
+    bgClass: 'bg-shopnet',
     framework: 'vuejs',
     description:
-      'Shopnet application, PWA, CSR, REST API, Analytics, hybrid app, etc...',
+      'Shopnet landing page, SPA, CSR, REST API, Analytics, infinite scroll, etc...',
   },
   {
     src: '/snd-logo.svg',
