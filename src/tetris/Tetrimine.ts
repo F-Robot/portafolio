@@ -151,6 +151,7 @@ export class Tetrimine implements ITetrimine {
     })
   }
   setDownInterval(timeout: number): void {
+    // @ts-ignore
     this.intervalId = setInterval(() => {
       this.canMoveInBoard(Direction.down)
         ? this.move(Direction.down)

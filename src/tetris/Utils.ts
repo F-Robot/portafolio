@@ -1,7 +1,7 @@
 import { cover } from 'intrinsic-scale'
 import type { CanvasOptions, IUtils } from './types'
 
-class Utils implements IUtils {
+class Utils {
   createCanvas(el: HTMLDivElement, options?: CanvasOptions) {
     const canvas = document.createElement('canvas')
     if (options && options.backgroundColor) {
