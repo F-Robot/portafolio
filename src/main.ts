@@ -16,19 +16,32 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import {
   faInstagram,
   faLinkedin,
-  faGithub,
   faTwitter,
+  faGithub,
+  faVuejs,
+  faReact,
 } from '@fortawesome/free-brands-svg-icons'
+
 import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons'
 
 /* add icons to the library */
-library.add(faInstagram, faLinkedin, faGithub, faTwitter, faBars, faXmark)
+library.add(
+  faInstagram,
+  faLinkedin,
+  faTwitter,
+  faGithub,
+  faXmark,
+  faVuejs,
+  faReact,
+  faBars
+)
 
 const app = createApp(App)
 
-app.use(createPinia())
-app.use(router)
-app.component('font-awesome-icon', FontAwesomeIcon)
-app.mount('#app')
+app
+  .component('font-awesome-icon', FontAwesomeIcon)
+  .use(createPinia())
+  .use(router)
+  .mount('#app')
 
 loadFonts()

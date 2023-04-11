@@ -12,14 +12,12 @@ type Link = { text: string; to: RouteLocationRaw }
 
 const links: Link[] = [
   { text: '_hello', to: { name: 'home' } },
-  { text: '_about-me', to: { name: 'about' } },
   { text: '_projects', to: { name: 'project' } },
-  { text: '_contact-me', to: { name: 'contact' } },
 ]
 const title = 'ricardo-blanco'
 
 const isOpen = ref(false)
-const openClass = computed(() => isOpen.value && 'absolute z-10 h-full')
+const openClass = computed(() => isOpen.value && 'absolute z-10 h-screen')
 const toggle = () => (isOpen.value = !isOpen.value)
 </script>
 
