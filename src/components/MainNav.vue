@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
+import { useScroollbar } from '@/composables/useScrollbar'
 
 import NavMenu from '@/components/NavMenu.vue'
 import NavLink from '@/components/NavLink.vue'
@@ -16,23 +17,27 @@ const links: Link[] = [
 ]
 const title = 'ricardo-blanco'
 
-const isOpen = ref(false)
-const openClass = computed(() => isOpen.value && 'absolute z-10 h-screen')
-const toggle = () => (isOpen.value = !isOpen.value)
+const isNavOpen = ref(false)
+const toggleNav = () => (isNavOpen.value = !isNavOpen.value)
+
+const navOpenClass = computed(() => isNavOpen.value && 'absolute z-10 h-screen')
+const showScrollbar = computed(() => !isNavOpen.value)
+
+useScroollbar(showScrollbar)
 </script>
 
 <template>
   <header
-    class="flex w-full flex-col rounded-lg bg-background lg:static lg:z-0 lg:h-14"
-    :class="openClass"
+    class="flex w-full flex-col overflow-auto overflow-y-hidden rounded-lg bg-background lg:static lg:z-0 lg:h-14"
+    :class="navOpenClass"
   >
     <nav
       class="flex h-14 justify-between border-b border-solid border-border lg:justify-start"
     >
       <NavTitle class="ml-5.25" :title="title" />
       <NavMenu
-        @click="toggle"
-        :active="isOpen"
+        @click="toggleNav"
+        :active="isNavOpen"
         class="mr-4.25 block lg:hidden"
       />
       <NavLink
@@ -43,7 +48,7 @@ const toggle = () => (isOpen.value = !isOpen.value)
         :to="to"
       />
     </nav>
-    <div v-if="isOpen" class="flex flex-col lg:hidden">
+    <div v-if="isNavOpen" class="flex flex-col lg:hidden">
       <NavLink
         v-for="{ text, to } in links"
         :text="text"
@@ -51,6 +56,6 @@ const toggle = () => (isOpen.value = !isOpen.value)
         :to="to"
       />
     </div>
-    <MainFooter v-if="isOpen" class="mt-auto lg:hidden" />
+    <MainFooter v-if="isNavOpen" class="mt-auto lg:hidden" />
   </header>
 </template>
